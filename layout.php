@@ -1,4 +1,5 @@
-<!DOCTYPE html>
+<?php
+return '<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8">
@@ -25,11 +26,11 @@
 			<div id ="logo"><img src="./logo/logo.png"/></div>
 			<ul class="navbar-nav mr-auto">	
 					<li class="nav-item">
-						<i class="fa-solid fa-eye"></i><a class="nav-link" href="index.html">View Task</a>
+						<i class="fa-solid fa-eye"></i><a class="nav-link" href="index.php">View Task</a>
 					</li>
 			 
 				  <li class="nav-item ">
-					<i class="fa-solid fa-plus"></i><a class="nav-link" href="create.html">Create Task</a>
+					<i class="fa-solid fa-plus"></i><a class="nav-link" href="create.php">Create Task</a>
 				  </li>
 				 
 				  
@@ -53,7 +54,7 @@
 					
 			</header>
 			<section class="p-2" style="background:white">
-					
+					   change
 			</section>
 			
 		</main>
@@ -61,7 +62,8 @@
 			This is at Test Project created by Okom Emmanuel
 		</footer>
 	</div>
-  </body>
+  </body>';
+  ?>
   <script>
  document.addEventListener("DOMContentLoaded", function() {
   

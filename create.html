@@ -79,22 +79,25 @@
   </body>
   <script>
 function createTask(){
+//alert('ok');
 	  let taskname=$("#taskname").val();
 	   let description=$("#description").val();
 	    let date=$("#date").val();
 			
-	
 	 $.ajax({
 		type:"POST",
 		url:"http://127.0.0.1:8000/api/task",
 		headers: {
-                'Access-Control-Allow-Origin':'*',    
+                   'Content-Type':'application/json',
+                    'Access-Control-Allow-Origin':'*',
+                    'Access-Control-Allow-Methods':'POST,PATCH,OPTIONS'
+                
             },
 		
 		data: { 
 			 taskname:JSON.stringify(taskname),
-			 taskdescription:JSON.stringify(description),
-			 completion_date:JSON.stringify(date),
+			 //taskdescription:JSON.stringify(description),
+			 //completion_date:'2022-10-12'
 			 
 			
 			},
