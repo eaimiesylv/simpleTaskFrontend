@@ -11,7 +11,7 @@ return '<!DOCTYPE html>
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 	
 	<script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
-	  <link rel="stylesheet" href="./style.css">
+	  <link rel="stylesheet" href="style.css">
   </head>
   <style>
    
@@ -23,7 +23,7 @@ return '<!DOCTYPE html>
 	<div class="main_container">
 		
 		<aside class="p-3">
-			<div id ="logo"><img src="./logo/logo.png"/></div>
+			<div id ="logo"><img src="logo/logo.png"/></div>
 			<ul class="navbar-nav mr-auto">	
 					<li class="nav-item">
 						<i class="fa-solid fa-eye"></i><a class="nav-link" href="index.php">View Task</a>
@@ -62,77 +62,9 @@ return '<!DOCTYPE html>
 			This is at Test Project created by Okom Emmanuel
 		</footer>
 	</div>
-  </body>';
-  ?>
-  <script>
- document.addEventListener("DOMContentLoaded", function() {
+  </body>
+  </html>';
   
-	selectTask();
-	
-});
-
-function selectTask(){
-	
-	
-	 $.ajax({
-		type:"GET",
-		url:"http://127.0.0.1:8000/api/task",
-		headers: {
-                'Content-Type':'application/json',
-                    'Access-Control-Allow-Origin':'*',
-                    'Access-Control-Allow-Methods':'POST,PATCH,OPTIONS'
-                
-            },
-		success: function(data) { 
-		   createTable(data);
-		},
-		 error: function (error) {
-                console.log(error);
-            }
-	
-		
-	});
-	
-}
-function createTable(myArray) {
-console.log(myArray);
- let result = " ";
-   for(let i=0; i<myArray.length; i++){
-		let c= i;
-		c++;
-    result +="<tr>";
-			result +="<td>" + c +"</td>";
-			result +="<td>"+myArray[i]['taskname']+"</td>";
-			result +="<td>"+myArray[i]['taskdescription']+"</td>";
-			result +="<td>"+myArray[i]['completion_date']+"</td>";
-			
-			result +="<td onclick='edit(this)'><span class='hid'>"+myArray[i]['id']+"/"+"</span><span>Edit</span></td>";
-			result +="<td onclick='del(this)'><span class='hid'>"+myArray[i]['id']+"/"+"</span><span>Delete</span></td>";
-			
-			//result +=myArray[i]['id'];
-		
-	  result += "</tr>"; 
-		
-	}
-$("#body").append(result);
-    console.log(result);
-}
-
-function del(e){
-	
-	var text = $(e).text();
-	text=text.split("/");
-	let val=text[0];
-	alert('Deletion successful');
-	
-}
-function edit(e){
-	
-	var text = $(e).text();
-	text=text.split("/");
-	let val=text[0];
-	alert('Deletion successful');
-	
-}
-  </script>
-</html>
+ 
+  ?>
+  

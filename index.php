@@ -37,12 +37,12 @@ function selectTask(){
 	 $.ajax({
 		type:"GET",
 		url:"http://127.0.0.1:8000/api/task",
-		headers: {
-                'Content-Type':'application/json',
+		/*headers: {
+                    'Content-Type':'application/json',
                     'Access-Control-Allow-Origin':'*',
-                    'Access-Control-Allow-Methods':'POST,PATCH,OPTIONS'
+                    'Access-Control-Allow-Methods':'GET'
                 
-            },
+            },*/
 		success: function(data) { 
 		   createTable(data);
 		},

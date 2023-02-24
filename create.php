@@ -1,7 +1,7 @@
 <?php
 
 
-					$form='<form action="#">
+			$form='<form action="#">
 					  <div class="form-group">
 						<label for="taskname">Task Name</label>
 						<input type="text" class="form-control" placeholder="Enter Task Name" id="taskname">
@@ -34,21 +34,14 @@ function createTask(){
 	  let taskname=$("#taskname").val();
 	   let description=$("#description").val();
 	    let date=$("#date").val();
-			
+			//alert(taskname);
 	 $.ajax({
 		type:"POST",
 		url:"http://127.0.0.1:8000/api/task",
-		headers: {
-                   'Content-Type':'application/json',
-                    'Access-Control-Allow-Origin':'*',
-                    'Access-Control-Allow-Methods':'POST,PATCH,OPTIONS'
-                
-            },
-		
 		data: { 
-			 taskname:JSON.stringify(taskname),
-			 //taskdescription:JSON.stringify(description),
-			 //completion_date:'2022-10-12'
+			 taskname:taskname,
+			 taskdescription:description,
+			 completion_date:date
 			 
 			
 			},
