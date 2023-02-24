@@ -12,7 +12,8 @@
 
 **Project Description**
 
-This is the admin api of a project that allows you to perform crud operation on a task
+This is the admin api of a project that allows to create,update, edit and delete task. The Api on the endpoint are called via AJax request using Jquery CDN
+
 **Project Limitation**
 
 This is a test project and should not be used for production
@@ -25,7 +26,7 @@ Html
 
 Css
 
-Jquery
+Jquery 
 
 Bootstrap 4.0
 
@@ -33,6 +34,7 @@ Javascript
 
 **Project Requirement**
 1. A Browser
+2. JQuery CDN
 
 **How to set up project**
 1. Clone or download the project
